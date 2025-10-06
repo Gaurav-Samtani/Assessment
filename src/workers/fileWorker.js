@@ -133,7 +133,7 @@ async function processFile(filePath) {
             parentPort.postMessage({ type: "error", error: err.message });
             // console.error("Row error:", err.message);
           }
-        }
+        } 
 
         // resolve({ status: "success", inserted });
         resolve({ type: "done", results: { status: "success", inserted } });
@@ -144,7 +144,7 @@ async function processFile(filePath) {
   });
 }
 
-// Worker execution
+
 (async () => {
   try {
     const result = await processFile(workerData.filePath);

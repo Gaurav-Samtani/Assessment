@@ -8,7 +8,7 @@ const User = require('../models/User');
 const { scheduleMessageAt } = require('../services/scheduler');
 
 
-// ================= Upload Routes =================
+// ================= Upload Routes ================= 
 const upload = multer({ dest: path.join(__dirname, '../../uploads/') });
 router.post('/upload', upload.single('file'), async (req, res) => {
     let responded = false;

@@ -7,4 +7,5 @@ const PolicySchema = new mongoose.Schema({
     company_collection_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Carrier' },
     user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true });
+
 module.exports = mongoose.model('Policy', PolicySchema);

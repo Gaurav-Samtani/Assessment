@@ -10,4 +10,5 @@ const UserSchema = new mongoose.Schema({
     gender: String,
     userType: String
 }, { timestamps: true });
+
 module.exports = mongoose.model('User', UserSchema);

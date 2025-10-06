@@ -15,8 +15,7 @@ async function initAgenda() {
     await agenda.start();
 }
 
-// makeloop
-// arita
+
 async function scheduleMessageAt(date, message) {
     if (!agenda) await initAgenda();
     const job = await agenda.schedule(date, 'insert-message', { message });

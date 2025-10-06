@@ -13,7 +13,6 @@ function cpuAverage() {
     return { idle: totalIdle / cpus.length, total: totalTick / cpus.length };
 }
 
-
 // returns percent CPU usage between two samples
 function calculateCpu(previous, current) {
     const idleDiff = current.idle - previous.idle;

@@ -4,4 +4,5 @@ const MessageSchema = new mongoose.Schema({
     scheduledAt: Date,
     insertedAt: Date
 }, { timestamps: true });
+
 module.exports = mongoose.model('MessageSchedule', MessageSchema);

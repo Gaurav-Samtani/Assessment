@@ -27,7 +27,7 @@ app.get('/health', (req, res) => res.json({ ok: true }));
     await initAgenda();
     const port = process.env.PORT || 3000;
     app.listen(port, () => console.log('Worker listening on port', port));
-})();
+})(); 
 
 
 module.exports = app;
