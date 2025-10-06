@@ -10,10 +10,10 @@ const Lob = require("../models/Lob");
 const Carrier = require("../models/Carrier");
 const Policy = require("../models/Policy");
 
-// Connect to MongoDB
+
 mongoose.connect(process.env.MONGO_URI);
 
-// Worker main function
+
 async function processFile(filePath) {
   return new Promise((resolve, reject) => {
     const rows = [];
@@ -131,7 +131,7 @@ async function processFile(filePath) {
             inserted++;
           } catch (err) {
             parentPort.postMessage({ type: "error", error: err.message });
-            // console.error("Row processing error:", err.message);
+            // console.error("Row error:", err.message);
           }
         }
 
